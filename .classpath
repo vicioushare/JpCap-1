@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/OWL-2"/>
+	<classpathentry kind="lib" path="/Users/Martin/Downloads/jpcap-master/thirdParty/jars/dev-classes_net.ultrametrics-0.03.jar"/>
+	<classpathentry kind="lib" path="/Users/Martin/Downloads/jpcap-master/thirdParty/jars/fooware_CommandLine-1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/Martin/Downloads/jpcap-master/thirdParty/jars/junit.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="/Users/Martin/Downloads/junit-4.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

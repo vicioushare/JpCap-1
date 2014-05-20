@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/martin/ontologies/2013/4/ResponseImpacts"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/martin/ontologies/2013/4/ResponseImpacts">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Availability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Block_IP_Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confidentiality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Divert_To_Honeypot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Integrity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quarantine_Hosts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restart_Hosts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Snipe_Session"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#does_not_affect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#increased_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#increases"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#not_affected_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reduced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reduces"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Availability"/>
+        <Class IRI="#Goal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Availability"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increased_by"/>
+            <Class IRI="#Block_IP_Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Availability"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increased_by"/>
+            <Class IRI="#Divert_To_Honeypot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Availability"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduced_by"/>
+            <Class IRI="#Quarantine_Hosts"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Availability"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduced_by"/>
+            <Class IRI="#Restart_Hosts"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Availability"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduced_by"/>
+            <Class IRI="#Snipe_Session"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Block_IP_Address"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increases"/>
+            <Class IRI="#Availability"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Block_IP_Address"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increases"/>
+            <Class IRI="#Confidentiality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Block_IP_Address"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increases"/>
+            <Class IRI="#Integrity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confidentiality"/>
+        <Class IRI="#Goal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confidentiality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increased_by"/>
+            <Class IRI="#Block_IP_Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confidentiality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increased_by"/>
+            <Class IRI="#Quarantine_Hosts"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confidentiality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increased_by"/>
+            <Class IRI="#Snipe_Session"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confidentiality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#not_affected_by"/>
+            <Class IRI="#Restart_Hosts"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confidentiality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduced_by"/>
+            <Class IRI="#Divert_To_Honeypot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Divert_To_Honeypot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increases"/>
+            <Class IRI="#Availability"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Divert_To_Honeypot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduces"/>
+            <Class IRI="#Confidentiality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Divert_To_Honeypot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduces"/>
+            <Class IRI="#Integrity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integrity"/>
+        <Class IRI="#Goal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integrity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increased_by"/>
+            <Class IRI="#Block_IP_Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integrity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increased_by"/>
+            <Class IRI="#Quarantine_Hosts"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integrity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increased_by"/>
+            <Class IRI="#Restart_Hosts"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integrity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#not_affected_by"/>
+            <Class IRI="#Snipe_Session"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integrity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduced_by"/>
+            <Class IRI="#Divert_To_Honeypot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quarantine_Hosts"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increases"/>
+            <Class IRI="#Confidentiality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quarantine_Hosts"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increases"/>
+            <Class IRI="#Integrity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quarantine_Hosts"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduces"/>
+            <Class IRI="#Availability"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restart_Hosts"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restart_Hosts"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#does_not_affect"/>
+            <Class IRI="#Confidentiality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restart_Hosts"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increases"/>
+            <Class IRI="#Integrity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restart_Hosts"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduces"/>
+            <Class IRI="#Availability"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snipe_Session"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#does_not_affect"/>
+            <Class IRI="#Integrity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snipe_Session"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#increases"/>
+            <Class IRI="#Confidentiality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snipe_Session"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#reduces"/>
+            <Class IRI="#Availability"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#affect"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#does_not_affect"/>
+        <ObjectProperty IRI="#affect"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#increased_by"/>
+        <ObjectProperty IRI="#affect"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#increases"/>
+        <ObjectProperty IRI="#affect"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#not_affected_by"/>
+        <ObjectProperty IRI="#affect"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#reduced_by"/>
+        <ObjectProperty IRI="#affect"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#reduces"/>
+        <ObjectProperty IRI="#affect"/>
+    </SubObjectPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
